@@ -17,7 +17,7 @@ if not TOKEN:
     raise RuntimeError("TELEGRAM_TOKEN is not set")
 
 app = Flask(__name__)
-application = Application.builder().token(TOKEN).build()
+application = Application.builder().token(TOKEN).updater(None).build()
 
 # --- UI texts ---
 UI = {
